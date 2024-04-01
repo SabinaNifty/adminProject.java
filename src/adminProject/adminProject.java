@@ -30,7 +30,7 @@ StatOfRepository(int number_of_commits, double avg_of_num_java_files, double avg
 class StatOfWarnings {
 int AbstractClassWithoutAbstractMethod;
 int AvoidReassigningCatchVariables;
-// Add other warning types as needed
+
 
 StatOfWarnings(int abstractClassWithoutAbstractMethod, int avoidReassigningCatchVariables) {
    this.AbstractClassWithoutAbstractMethod = abstractClassWithoutAbstractMethod;
@@ -44,7 +44,7 @@ public static void main(String[] args) {
    // Create sample data
    StatOfRepository repositoryStats = new StatOfRepository(101, 30.2, 193.2);
    StatOfWarnings warningStats = new StatOfWarnings(1908, 2020);
-   // Add more warning types if needed
+
 
    RepositoryStatistics stats = new RepositoryStatistics("/a/b/c", repositoryStats, warningStats);
 
@@ -54,19 +54,19 @@ public static void main(String[] args) {
 
    // Print JSON string with formatted layout
    System.out.println("{");
-   System.out.println("	°∞location°±: °∞" + stats.location + "°±,");
-   System.out.println("	°∞stat_of_repository°±:  " );
+   System.out.println("	‚Äúlocation‚Äù: ‚Äú" + stats.location + "‚Äù,");
+   System.out.println("	‚Äústat_of_repository‚Äù:  " );
    System.out.println("        { " );
 
-   System.out.println("    		°∞number_of_commits°±: " + stats.stat_of_repository.number_of_commits +",");
-   System.out.println("   		°∞avg_of_num_java_files°±: " + stats.stat_of_repository.avg_of_num_java_files + ",");
-   System.out.println("   	        °∞avg_of_num_warnings°±: " + stats.stat_of_repository.avg_of_num_warnings + ",");
+   System.out.println("    		‚Äúnumber_of_commits‚Äù: " + stats.stat_of_repository.number_of_commits +",");
+   System.out.println("   		‚Äúavg_of_num_java_files‚Äù: " + stats.stat_of_repository.avg_of_num_java_files + ",");
+   System.out.println("   	        ‚Äúavg_of_num_warnings‚Äù: " + stats.stat_of_repository.avg_of_num_warnings + ",");
    System.out.println(" 	 }");
-   System.out.println("         °∞stat_of_warnings°±: ");
+   System.out.println("         ‚Äústat_of_warnings‚Äù: ");
    System.out.println("                 {");
 
-   System.out.println("   		         °∞AbstractClassWithoutAbstractMethod°±: " + stats.stat_of_warnings.AbstractClassWithoutAbstractMethod + ",");
-   System.out.println("   		         °∞AvoidReassigningCatchVariables°±: " + stats.stat_of_warnings.AvoidReassigningCatchVariables + ",");
+   System.out.println("   		         ‚ÄúAbstractClassWithoutAbstractMethod‚Äù: " + stats.stat_of_warnings.AbstractClassWithoutAbstractMethod + ",");
+   System.out.println("   		         ‚ÄúAvoidReassigningCatchVariables‚Äù: " + stats.stat_of_warnings.AvoidReassigningCatchVariables + ",");
    System.out.println("                          ...");
    System.out.println("                  }");
    System.out.println("}");
